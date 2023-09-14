@@ -1,6 +1,13 @@
-import * as Math from "./calculate.mjs";
+import * as csv from 'csv-parse';
+import fs from 'fs';
 
-console.log(Math.add(5, 8));
-console.log(Math.sub(5, 8));
-console.log(Math.multiply(5, 8));
-console.log(Math.div(5, 8));
+let sum = 0;
+
+fs.createReadStream("transaction.csv")
+    .pipe(csv.parse({dekimiter:","}))
+    .on("data", function(row) {
+        sum += parseFloat(roe[1]);
+    })
+    .on("end", function() {
+        console.log(sum);
+    })
