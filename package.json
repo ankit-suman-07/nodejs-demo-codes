@@ -1,0 +1,11 @@
+{
+  "name": "firstappdemo",
+  "version": "1.0.0",
+  "description": "a demo for nodejs",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ankit",
+  "license": "ISC"
+}
