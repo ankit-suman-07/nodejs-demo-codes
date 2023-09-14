@@ -6,7 +6,7 @@ let sum = 0;
 fs.createReadStream("transaction.csv")
     .pipe(csv.parse({dekimiter:","}))
     .on("data", function(row) {
-        sum += parseFloat(roe[1]);
+        sum += parseFloat(row[1]);
     })
     .on("end", function() {
         console.log(sum);
